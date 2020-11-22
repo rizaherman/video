@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Video Player</title>
+	<!-- manggil CSS -->
+	
+    <link rel=stylesheet href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link rel=stylesheet href="style.css">
+	<!-- RESPONSIVE HP -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<!-- BUAT BAJU PALING LUAR -->
+<header>
+	<span><a id="logo" href="index.html"><img width="50" src="2.png"/></a></span>
+	<nav class="navigasi">
+	    <ul>
+	        <li><a class="garis-biru" href="index.html">Home</a></li><!--
+	     --><li><a href="videoplayer.html">Video Player</a></li>
+	     	<li><a href="profile.html">About us</a></li>
+	    </ul>
+	</nav>
+	<span><a id="login" href="login.html">Login</a></span>
+</header>
+<div id="login-container">
+
+	<div id="formulir">
+		<h2 class="registrasi">Registrasi Baru</h2>
+		<form>
+		<table class="table table-striped">
+			<tr>
+				<th>ID</th>
+				<td>:</td>
+				<td><input class="form-control" type="text" name="username" placeholder="Masukan Id" required></td>
+			</tr>
+			<tr>
+				<th>Name</th>
+				<td>:</td>
+				<td><input class="form-control" type="text" name="nama"placeholder="Masukan Nama" required></td>
+			</tr>
+			<tr>
+				<th>Tempat-tanggal_lahir</th>
+				<td>:</td>
+				<td><input class="form-control" type="text" name="tempat_tanggal_lahir" required></td>
+			</tr>
+			<tr>
+				<th>Alamat</th>
+				<td>:</td>
+				<td><input class="form-control" type="text" name="alamat"placeholder="Masukan Alamat" required></td>
+			</tr>
+			<tr>
+				<th>Agama</th>
+				<td>:</td>
+				<td>
+					<select class="form-control" name="agama" required>
+						<option value="">Pilih Agama</option>
+						<option value="">Atheis</option>
+						<option>Islam</option>
+						<option>Kristen</option>
+						<option>Budha</option>
+						<option>Hindu</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<th style="width:25%">jenis kelamin</th>
+				<td>:</td>
+				<td>
+					<div class="form-check">
+						<input class="form-check-input" name="role" value="lk"type="radio">
+						<label class="form-check-label">laki-laki</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" name="role" value="pr"type="radio">
+						<label class="form-check-label">Perempuan</label>
+					</div>
+				</tr>
+			</table>
+			<button class="btn btn-primary">Daftar</button>
+		</form>
+	</div>
+</div>
+	
+<script src="script.js"></script>
+</body>
+</html>

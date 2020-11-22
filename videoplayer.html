@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Video Player</title>
+	<!-- manggil CSS -->
+    <link rel=stylesheet href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link rel=stylesheet href="font-awesome-4.7.0/css/font-awesome.css">
+	<link rel=stylesheet href="style.css">
+	<!-- RESPONSIVE HP -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- BUAT BAJU PALING LUAR -->
+<header>
+	<span><a id="logo" href="index.html"><img width="50" src="2.png"/></a></span>
+	<nav class="navigasi">
+	    <ul>
+	        <li><a href="index.html">Home</a></li><!--
+	     --><li><a class="garis-biru" href="videoplayer.html">Video Player</a></li>
+	     	<li><a href="profile.html">About us</a></li>
+	    </ul>
+	</nav>
+	<span><a id="login" href="login.html">Login</a></span>
+</header>
+
+	<div id="containers" >
+
+		<div id="container">
+			<fieldset>
+				<legend id="title">Video Player</legend>
+				<div id="selectFile">
+					<form id="form" onsubmit="return false;">
+						<table>
+							<tr>
+								<th width="200">Input ID</th>
+								<td>:</td>
+								<td width="900">
+									<div class="input-group mb-3">
+									  <div class="input-group-prepend">
+									    <span class="input-group-text" id="basic-addon1"><i class="fa fa-address-card"></i></span>
+									  </div>
+									  <input oninput="ketikNama()" autocomplete="off" id="nim" type="text" class="form-control" placeholder="Masukkan ID" aria-label="Username" aria-describedby="basic-addon1">
+									</div>
+
+								</td>
+							</tr>
+							<tr>
+								<th>Input Nama</th>
+								<td>:</td>
+								<td>
+									<div class="input-group mb-3">
+									  <div class="input-group-prepend">
+									    <span class="input-group-text" id="basic-addon1"><i class="fa fa-user-circle-o"></i></span>
+									  </div>
+									  <input oninput="munculUpload()" disabled autocomplete="off" id="nama" type="text" class="form-control" placeholder="Masukkan Nama" aria-label="Username" aria-describedby="basic-addon1">
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th id="head-upload">Upload Video Kamu</th>
+								<td>:</td>
+								<td id="upload">
+									<input id="body-upload" name="localfile" size="50" maxlength="100000" accept="video/*" type="file" onchange="isSelected();">
+								</td>
+							</tr>
+							<tr>
+								<th></th>
+								<td></td>
+								<td><button id="tombol" onclick="playlocalVID();">Play Video</button></td>
+							</tr>
+						</table>
+						
+					</FORM>
+				</div>
+			</fieldset>
+		</div>
+
+	  <div id="video">
+		  	<table id="dataDiri">
+		  		<tr>
+		  			<th>ID</th>
+		  			<td>:</td>
+		  			<td id="hasilNim"></td>
+		  		</tr>
+		  		<tr>
+		  			<th>Nama</th>
+		  			<td>:</td>
+		  			<td id="hasilNama"></td>
+		  		</tr>
+		  		<tr>
+		  			<th>Judul Video</th>
+		  			<td>:</td>
+		  			<td id="judul"></td>
+		  		</tr>
+		  	</table>
+	    <video controls loop id="videoPlayer">
+	      <source id="currentVID">
+	    </video>
+
+
+	    <span id="span">Video akan tampil disini</span>
+
+	  </div>
+	</div>
+
+<script src="script.js"></script>
+</body>
+</html>
